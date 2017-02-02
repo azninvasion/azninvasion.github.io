@@ -9,12 +9,18 @@
         <title>AZN | News</title>
 		<!--Ellans Help Section-->
 		<!-- Added a few animation css and classes for you Liam -->
-
         <!-- Lime's code block start-->
+        <style>
+          h1{
+            padding-top: 0.2em;
+            font: 4em BebasNeue, sans-serif;
+          }
+        </style>
         <!-- JQuery Google CDN -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
                 
         <link rel="stylesheet" href="css/styleLime.css">
+        <link rel="stylesheet" href="css/customfonts.css">
 
         <!-- GOTO http://www.timestampgenerator.com FOR ISO TIME! USE GMT+12 -->
           <!-- TIME AGO EXAMPLE <time class="timeago" datetime="2016-10-28T12:35:46Z" title="29 Oct 2016">...</time> use ellipses as if an error occurs it won't actually show a date -->
@@ -37,22 +43,14 @@
 <!--NAVIGATION BAR CODE-->
   <div class="w3-top">
   <ul style="background-color: #2C2F33;" class="w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
-  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-    <a style="background-color: #558C89;" class="w3-padding-24 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-  </li>
-  <li class="w3-hide-small"> <a href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
-  <li ><a style="background-color: #74AFAD;" href="News.html" class="w3-padding-24 w3-hover-white">News</a></li>
-  <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
-  <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
-  <li class="w3-right w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">About</a></li>
-	<li class="w3-padding-top w3-hide-small">
-	  <button style="background-color: #7289DA; color: #e5e5e5;" class="w3-btn w3-round-large">
-      <a target="_blank" class="w3-hover-none w3-hover-text-white" href="https://discord.gg/vCUqRrt">Discord</a>
-      </button>
-      </li>
-  <li class="w3-padding-top w3-hide-small">
-    <button id="discord-button" class="w3-btn w3-round-large">⮟</button>
-	</li>
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right"><a style="background-color: #558C89;" class="w3-padding-24 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></li>
+    <li class="w3-hide-small"> <a href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
+    <li ><a style="background-color: #74AFAD;" href="News.html" class="w3-padding-24 w3-hover-white">News</a></li>
+    <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
+    <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
+    <li class="w3-right w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">About</a></li>
+    <li class="w3-hide-small"><a target="_blank" style="width: 130px; background-image: url(Assets/spr_1.png);" class="discord-nav-buttons w3-btn w3-hover-text-white" href="https://discord.gg/vCUqRrt"></a></li>
+    <li class="w3-hide-small"><button id="discord-button" class="discord-nav-buttons w3-btn">⮟</button></li>
   </ul> 
   <div id="discord-widget" class="absolute" style="display: none;">
     <iframe src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
@@ -67,138 +65,150 @@
     </ul>
   </div>
  </div>
-<!--MIDDLE COLUMN CODE-->
-  <div class="w3-padding-bottom w3-card-2" style="position:relative; z-index: 98; background-color: #5c5e5f;">
+<!--MASTHEAD-->
+  <div class="w3-card-2" style="position:relative; z-index: 98; background-color: #5c5e5f;">
     <div style="height: 75px; opacity: 0;">
     </div>
     <header class="headline w3-container w3-theme w3-padding" id="myHeader">
       <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i>
       <div class="w3-center">
-      <h1 class="w3-xxxlarge w3-animate-bottom">Main Headlines</h1>
+      <h1 class="w3-xxxlarge w3-animate-bottom">Main Headline</h1>
       </div>
     </header>
     <div class="w3-center w3-row">
-      <div class="w3-container">
-        <p style="width: 55%; margin: auto;" class="w3-center w3-round w3-blue-grey w3-padding">
-      <span class="w3-container w3-green w3-round w3-tag">New Member</span>
-      "We would like to announce the newest, and worst new member in aZn...... <em class="text-outline text-no-style">BuchoySC</em>! WOOO much enthusiasm"</p>
+     <div class="w3-container w3-center w3-round w3-blue-grey w3-padding-8 relative" style="width: 50%; margin: auto;">
+        <p style="margin: 0">
+          <span class="w3-container w3-green w3-round w3-tag">New Member</span>
+          We would like to announce the newest, and worst new member in aZn: <em class="text-outline text-no-style">BuchoySC</em>! WOOO much enthusiasm
+        </p>
       </div>
-      <button style="margin-top: 20px; background-color: #74AFAD;" class="w3-hover-white w3-round w3-btn w3-large">Learn More!</button>
+      <button style="margin: 11px; background-color: #74AFAD;" class="w3-hover-white w3-round w3-btn w3-large">Learn More!</button>
     </div>
   </div>
 
 <!--News Section BOY-->
-<div class="w3-row" id="news-main-positioner">
-<!--News Update, takes left half of page, may be headlines instead of videos-->
-  <div id="main-1" data-article="1" class="w3-half focus absolute article">
-    <div class="w3-animate-bottom w3-display-container w3-padding-16 w3-padding-left w3-padding-right" style="height: 552px; background-color: #3e4042;">
-        <iframe width="100%" height="520px" src="https://www.youtube.com/embed/zIHsuujC5Vk" frameborder="0" allowfullscreen></iframe>
+<div id="side-margins" style="margin: 0 150px;">
+  <div class="flex-row" style="background-color:#353638">
+  <div class="w3-row"  style="display: inline-flex;" id="news-main-positioner">
+    <!--News Update, takes left half of page, may be headlines instead of videos-->
+    <div id="main-1" data-article="1" data-main="1" class="w3-twothird focus article">
+      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
+          <span class="article-banner-positioner">
+            <iframe src="https://www.youtube.com/embed/zIHsuujC5Vk" frameborder="0" allowfullscreen></iframe>
+          </span>
+      </div>
+      <div class="w3-animate-bottom w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
+            <span class="w3-container w3-green w3-small w3-round w3-tag" style="font-size: 16px!important;">New Video</span>
+            <h1 class="w3-text-shadow">CSGO | Competitive Highlights #03</h1>
+            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-blue">Karma</em> - AKA RexWrecks <span class="w3-round w3-tag w3-red">Uploaded <time class="timeago" datetime="2016-11-22T13:00:00+12:00" title="11-Nov-2016"/></span></p>
+              <hr style="border-color: #1b1b1b;">
+            <p>
+              <em class="name-blue">Karma</em> is back with another frag montage in CS:GO showing his AWP and Deagle skills
+              <br>
+              TODO: Finish description.
+            </p>
+      </div>
     </div>
-    <div class="w3-animate-bottom w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
-          <span class="w3-container w3-green w3-small w3-round w3-tag" style="font-size: 16px!important;">New Video</span>
-          <h2 class="w3-text-shadow"><strong>CSGO | Competitive Highlights #03</strong></h2>
-          <p style="font-size: 0.8em;" class="text-outline">By <em class="name-blue">Karma</em> - AKA RexWrecks <span class="w3-round w3-tag w3-red">Uploaded <time class="timeago" datetime="2016-11-22T13:00:00+12:00" title="11-Nov-2016"/></span></p>
-            <hr style="border-color: #1b1b1b;">
-          <p>
-            <em class="name-blue">Karma</em> is back with another frag montage in CS:GO showing his AWP and Deagle skills
-            <br>
-            TODO: Finish description.
-          </p>
+    <div id="main-2" data-article="2" data-main="1" class="absolute article">
+      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
+        <span class="article-banner-positioner">
+          <img src="Assets/example.jpg"></img>
+        </span>
+      </div>
+      <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
+            <span class="w3-container w3-blue w3-small w3-round w3-tag" style="font-size: 16px!important;">News Article</span>
+            <h1 class="w3-text-shadow">When the article is clicked</h1>
+            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
+              <hr style="border-color: #1b1b1b;">
+            <p>
+              <em class="name-green">Lime</em> made this cool news carousel reel
+              <br>
+              TODO: Make news
+            </p>
+      </div>
     </div>
-  </div>
-  <div id="main-2" data-article="2" class="w3-half absolute article">
-    <div class="w3-display-container w3-padding-16 w3-padding-left w3-padding-right" style="height: auto; background-color: #3e4042;">
-        <img width="100%" height="520px" src="Assets/example.jpg"></img>
+    <div id="main-3" data-article="3" data-main="1" class="absolute article">
+      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
+        <span class="article-banner-positioner">
+          <img src="Assets/example.jpg"></img>
+        </span>
+      </div>
+      <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
+            <span class="w3-container w3-blue w3-small w3-round w3-tag" style="font-size: 16px!important;">News Article</span>
+            <h1 class="w3-text-shadow">It will show the full article</h1>
+            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
+              <hr style="border-color: #1b1b1b;">
+            <p>
+              <em class="name-green">Lime</em> made this cool news carousel reel
+              <br>
+              TODO: Make news
+            </p>
+      </div>
     </div>
-    <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
-          <h2 class="w3-text-shadow"><strong>When the article is clicked</strong></h2>
-          <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
-            <hr style="border-color: #1b1b1b;">
-          <p>
-            <em class="name-green">Lime</em> made this cool news carousel reel
-            <br>
-            TODO: Make news
-          </p>
+    <div id="main-4" data-article="4" data-main="1" class="absolute article">
+      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
+        <span class="article-banner-positioner">
+          <img src="Assets/example.jpg"></img>
+        </span>
+      </div>
+      <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
+            <span class="w3-container w3-blue w3-small w3-round w3-tag" style="font-size: 16px!important;">News Article</span>
+            <h1 class="w3-text-shadow">On the left side</h1>
+            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
+              <hr style="border-color: #1b1b1b;">
+            <p>
+              <em class="name-green">Lime</em> made this cool news carousel reel
+              <br>
+              TODO: Make news
+            </p>
+      </div>
     </div>
-  </div>
-  <div id="main-3" data-article="3" class="w3-half absolute article">
-    <div class="w3-display-container w3-padding-16 w3-padding-left w3-padding-right" style="height: auto; background-color: #3e4042;">
-        <img width="100%" height="520px" src="Assets/example.jpg"></img>
-    </div>
-    <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
-          <h2 class="w3-text-shadow"><strong>It will show the full article</strong></h2>
-          <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
-            <hr style="border-color: #1b1b1b;">
-          <p>
-            <em class="name-green">Lime</em> made this cool news carousel reel
-            <br>
-            TODO: Make news
-          </p>
-    </div>
-  </div>
-  <div id="main-4" data-article="4" class="w3-half absolute article">
-    <div class="w3-display-container w3-padding-16 w3-padding-left w3-padding-right" style="height: auto; background-color: #3e4042;">
-        <img width="100%" height="520px" src="Assets/example.jpg"></img>
-    </div>
-    <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
-          <h2 class="w3-text-shadow"><strong>On the left side</strong></h2>
-          <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
-            <hr style="border-color: #1b1b1b;">
-          <p>
-            <em class="name-green">Lime</em> made this cool news carousel reel
-            <br>
-            TODO: Make news
-          </p>
-    </div>
-  </div>
-</div>
- <!--Right half, has the article selectors-->
- <div class="w3-half w3-container" style="opacity: 0; display: block;height: 800px;">
-</div>
- <div class="w3-animate-right w3-container w3-half" style="padding:8px;">
-    <h1 style="margin:0; padding-left: 8px;" >OTHER NEWS</h1>
-    <!--Only four articles can fit in ONE SLIDE-->
+  </div><!--
+  --><div id="UNTITLED-positioner" style="display: inline-flex; vertical-align: top; max-width: 500px">
+      <div class="w3-animate-right w3-container" style="padding:0;">
+        <div style="background-color: #303133; width: 100%; padding-left: 8px;">
+          <h1 style="margin:0;">Other News</h1>
+        </div>
+      <!--Only four articles can fit in ONE SLIDE-->
       <div data-article="1" class="sub-news selected w3-half main-button">
         <article>
-          <div style=" width: 452px; background-color: #5c5e5f; position: absolute; display:none;">
-            <h5 class="w3-padding-left">CSGO | Competitive Highlights #03</h5>
-            <p style="margin: 0;"></p>
-          </div>
-            <img width="100%"src="http://img.youtube.com/vi/zIHsuujC5Vk/maxresdefault.jpg" title="CSGO | Competitive Highlights #03" alt="CSGO | Competitive Highlights #03">
-        </article>
+            <div style="width: auto; background-color: #5c5e5f; padding:0;">
+              <h5 width="150px">CSGO | Competitive Highlights #03</h5>
+            </div>
+              <img width="100%"src="http://img.youtube.com/vi/zIHsuujC5Vk/maxresdefault.jpg" title="CSGO | Competitive Highlights #03" alt="CSGO | Competitive Highlights #03">
+          </article>
+      </div>  
+      <!--ARTICLE 2-->
+        <div data-article="2" class="sub-news w3-half main-button">
+          <article>
+            <div style="background-color: #5c5e5f;">
+              <h5>When the article is clicked</h5>
+            </div>
+              <img width="100%"src="Assets/example.jpg" alt="Other News">
+          </article>
+        </div>
+      <!--ARTICLE 3-->
+        <div data-article="3" class="sub-news w3-half main-button">
+          <article>
+            <div style="background-color: #5c5e5f;">
+              <h5>It will show the full article</h5>
+            </div>
+              <img width="100%"src="Assets/example.jpg" alt="Other News">
+          </article>
+        </div>
+      <!--ARTICLE 4-->
+        <div data-article="4" class="sub-news w3-half main-button">
+          <article>
+            <div style="background-color: #5c5e5f;">
+              <h5>on the left side</h5>
+            </div>
+              <img width="100%"src="Assets/example.jpg" alt="Other News">
+          </article>
+        </div>
+      </div>
   </div>
-    <!--ARTICLE 2-->
-      <div data-article="2" class="sub-news w3-half main-button">
-        <article>
-          <div style=" width: 452px; background-color: #5c5e5f; position: absolute;">
-            <h5 class="w3-padding-left">When the article is clicked</h5>
-            <p style="margin: 0;"></p>
-          </div>
-            <img width="100%"src="Assets/example.jpg" alt="Other News">
-        </article>
-      </div>
-    <!--ARTICLE 3-->
-      <div data-article="3" class="sub-news w3-half main-button">
-        <article>
-          <div style=" width: 452px; background-color: #5c5e5f; position: absolute;">
-            <h5 class="w3-padding-left">It will show the full article</h5>
-            <p style="margin: 0;"></p>
-          </div>
-            <img width="100%"src="Assets/example.jpg" alt="Other News">
-        </article>
-      </div>
-    <!--ARTICLE 4-->
-      <div data-article="4" class="sub-news w3-half main-button">
-        <article>
-          <div style=" width: 452px; background-color: #5c5e5f; position: absolute;">
-            <h5 class="w3-padding-left">on the left side</h5>
-            <p style="margin: 0;"></p>
-          </div>
-            <img width="100%"src="Assets/example.jpg" alt="Other News">
-        </article>
-      </div>
+  </div>
 </div>
-<!--what to put in this empty space hmmmm...-->
 <!--FOOTER YEAH :D-->
 <footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33; " class="w3-col w3-container">
      <div style="width: 100%px; font-size: 24px;"class="w3-padding-16 w3-container w3-center">
@@ -210,7 +220,7 @@
             <a href="Contact.html">Contact</a>
          </nav>
 	 
-	 </div>
+	  </div>
       <p style="font-size: 16px; padding: 20px;"class="w3-text-gray 3-container w3-center">© All rights reserved. Copyright AZN Invasion 2016.</p>
 </footer>
 

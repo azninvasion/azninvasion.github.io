@@ -7,44 +7,66 @@
 #discord-widget{
     left: 25.4em;
 }
-#discord-button{
-     height: 59px;
-     color: #e5e5e5;
-     background-color: #7289DA;
+.discord-nav-buttons{
+    padding: 24px!important; 
+    background-color: #7289DA;
+    height: 75px; 
+    background-position: 8px 24px;
+}
+.discord-nav-buttons:hover{
+    background-color: #7289DA!important;
+    filter: brightness(0.75)!important;
 }
 #learn-button{
     cursor: pointer;
 }
-.article-main-description{
-    padding: 16px;
+.flex-column{
+    flex-direction: column;
 }
-.sub-news{
-    padding: 8px 8px 8px 8px;
+.flex-row{
+    flex-direction: row;flex-wrap: nowrap;
 }
-.sub-news > article{
-    cursor: pointer;
-}
-.article-banner-parent > *{
-    margin: auto; 
-    display: flex;
-    width: 80%;
-    height: 560px;
-}
-div[data-article] > article > div > h5{
-    margin: 0;
-    padding: 0 0 0 5px;
-    white-space: nowrap; 
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.focus{
-    opacity: 1!important;
-}
-.article{
-    opacity: 0;
-    transition: opacity 400ms;
-}
+/*News Page*/
+    .article-main-description{
+        padding: 16px;
+    }
+    .sub-news{
+        padding: 8px 8px 8px 8px;
+    }
+    .sub-news > article{
+        cursor: pointer;
+    }
+    #article-banner-container{
+        padding: 0 101.5px;
+    }
+    .article-banner-positioner > *{
+        margin: auto;
+        display: flex;
+        width: 900px;
+        height: 500px;
+    }
+    div[data-main]{
+        width: auto;
+    }
+    div[data-main] > div{
+        background-color: #3e4042;
+        padding: 24px;
+    }
+    div[data-article] > article > div > h5{
+        margin: 0;
+        padding: 0 0 0 5px;
+        white-space: nowrap; 
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .article{
+        opacity: 0;
+        transition: opacity 400ms;
+    }
+    #news-main-positioner > .focus{
+        z-index: 99;
+    }
 /*Text Effects*/
     .text-outline{
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -75,11 +97,6 @@ div[data-article] > article > div > h5{
         }
 
 /*Members player profiles*/
-.flex-column{
-    flex-direction: column;
-    display: inline-flex;
-    vertical-align: top;
-}
     .player-banner img { 
         display: inline-block;
         height: 100%;
@@ -118,9 +135,7 @@ div[data-article] > article > div > h5{
         letter-spacing: -1px;
         font: 1.4em 'Amiko', sans-serif;
     }
-    #news-main-positioner > .focus{
-        z-index: 99;
-    }
+    
 /*Carousel stuff*/
     .carousel-slide > div{
         transition: opacity 400ms;
@@ -147,7 +162,9 @@ div[data-article] > article > div > h5{
         position: relative;
         top: auto;
     }
-
+    .focus{
+        opacity: 1!important;  
+    }
 /*Rotations*/
     .rotate180{
     -webkit-transform: rotate(180deg);

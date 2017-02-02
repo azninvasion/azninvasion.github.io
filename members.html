@@ -6,74 +6,47 @@
         <link rel="stylesheet" href="styleAZNews.css">
         <link rel="stylesheet" href="css/w3.css">
         <link rel="shortcut icon" href="Assets/logo.png"/>
-        <title>AZN | Members</title>
+        <script src="jquery/discord.drawer.js"></script>
+        <title>AZN | Asian Invasion</title>
+        <!-- JQuery Google CDN -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<!--Ellans Help Section-->
 		<!--My Website CSS http://www.w3schools.com/w3css/default.asp-->
 
-    <!-- Lime's code block start-->    
-      <!--Fonts-->
-      <link rel="stylesheet" href="css/customfonts.css">
-        <!--Google Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
-     <!-- JQuery Google CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-      <link rel="stylesheet" href="css/styleLime.css">
-      <!--Lime Scripts-->
-        <script src="jquery\lime_carousel.js"></script>
+        <!-- Lime's code block start-->     
+        <link rel="stylesheet" href="css/styleLime.css">
         <script src="jquery/discord.drawer.js"></script>
-      <!--Lime Page Styles-->
-        <style>
-          /*This should really only be embeded in HTML file because the arrows will be different for each page.*/
-            .arrow{
-              height: 1000px;
-              width: 32px;
-              background-color: #2C2F33;
-              z-index: 99;
-              cursor: pointer;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            }
-        </style>
-        
 </head>
  <body>
    
-<!--NAVIGATION BAR CODE-->
-<div class="w3-top">
+   <!--NAVIGATION BAR CODE-->
+  <nav class="w3-top">
   <ul style="background-color: #2C2F33;" class="w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
-  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-    <a style="background-color: #558C89;" class="w3-padding-24 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-  </li>
-  <li class="w3-hide-small"> <a href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
-  <li class="w3-hide-small"><a href="News.html" class="w3-padding-24 w3-hover-white">News</a></li>
-  <li><a style="background-color: #74AFAD;" href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
-  <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
-  <li class="w3-right w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">About</a></li>
-	<li class="w3-padding-top w3-hide-small">
-	  <button style="background-color: #7289DA; color: #e5e5e5;" class="w3-btn w3-round-large">
-      <a target="_blank" class="w3-hover-none w3-hover-text-white" href="https://discord.gg/vCUqRrt">Discord</a>
-      </button>
-      </li>
-  <li class="w3-padding-top w3-hide-small">
-    <button id="discord-button" class="w3-btn w3-round-large">⮟</button>
-	</li>
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+      <a style="background-color: #558C89;" class="w3-padding-24 w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">☰</a>
+    </li>
+    <li><a href="index.html" class=" w3-padding-24 w3-hover-white">Home</a></li>
+    <li class="w3-hide-small"><a href="News.html" class=" w3-padding-24 w3-hover-white">News</a></li>
+    <li class="w3-hide-small"><a style="background-color: #74AFAD;" href="members.html" class=" w3-padding-24 w3-hover-white">Members</a></li>
+    <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
+    <li class="w3-right w3-hide-small"><a href="#" class=" w3-padding-24 w3-hover-white">About</a></li>
+    <li class="w3-hide-small"><a target="_blank" style="width: 130px; background-image: url(Assets/spr_1.png);" class="discord-nav-buttons w3-btn w3-hover-text-white" href="https://discord.gg/vCUqRrt"></a></li>
+    <li class="w3-hide-small"><button id="discord-button" class="discord-nav-buttons w3-btn">⮟</button></li>
   </ul> 
-
-  <div id="discord-widget" class="absolute" style="display: none;">
+    <div id="discord-widget" class="absolute" style="display: none;">
     <iframe src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-  </div> 
+    </div> 
   
   <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-animate-top w3-hide w3-hide-large w3-hide-medium">
-      <ul style="border-top: none; background-color: #2C2F33;" class="w3-navbar w3-left-align w3-large">
-        <li><a class="w3-padding-large" href="News.html">News</a></li>
-        <li><a style="background-color: #74AFAD;" class="w3-padding-large" href="members.html">Members</a></li>
-        <li><a class="w3-padding-large" href="#">Contact</a></li>
-        <li><a class="w3-padding-large" href="#">About</a></li>
-      </ul>
-    </div>
-</div>
+  <div id="navDemo" class="w3-animate-top w3-hide w3-hide-large w3-hide-medium">
+    <ul style="border-top: none; background-color: #2C2F33;" class="w3-navbar w3-left-align w3-large">
+      <li><a class="w3-padding-large" href="News.html">News</a></li>
+      <li><a style="background-color: #74AFAD;" class="w3-padding-large" href="members.html">Members</a></li>
+      <li><a class="w3-padding-large" href="#">Contact</a></li>
+      <li><a class="w3-padding-large" href="#">About</a></li>
+    </ul>
+  </div>
+ </nav>
   <!--Middle Column Code-->
   <header class="w3-container w3-center w3-padding-128">
    <h1 class="w3-hide-small w3-margin w3-jumbo">MEET THE TEAM</h1>
@@ -81,112 +54,108 @@
    <hr style="width: 50%; margin: auto;">
     <p class="w3-small">find out who is behind all the fun</p>
   </header>
-<div style="text-align: center;">
-  JAMES|JOHN|ELLAN|LIAM|SAM|AMIR|SEAN
-</div>
-<div style="position: relative; top:0px; height: 1000px;">
-  <div class="carousel-slide">
   
-<!--James' Slide-->
-    <div id="JamesSlide" class="focus player-slide">
-          <div class="player-banner">
-            <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ee/ee3352b096e73c514ce5fc3276fd057b2bcddc96_full.jpg" alt="James"><!--
-            --><span class="flex-column name"><h1 class="name-purple ">SirFoxy</h1>
-              <h3 class="text-outline">Role</h3>
-              </span>
-          </div>
-          <div class="player-description">
-            Insert description
-          </div>
+  <section class="w3-row" style="width: 70%; margin: auto; background-color: #151719;">
+   <!--James-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/47/477741bd29f70d81c4658d8c084f65b61fd4d395_full.jpg" alt="James" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>SirFoxy</b>
+		  <br>
+		  <a class="w3-center w3-opacity">Dedicated Founder</a>
+		  </p>
+        </div>
+      </div>
     </div>
-<!--John's Slide-->
-    <div id="JohnSlide" class="player-slide">
-          <div class="player-banner">
-            <img src="https://yt3.ggpht.com/-LrkU1bbwfrY/AAAAAAAAAAI/AAAAAAAAAAA/ooVewW7yTeI/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="John"><!--
-            --><span class="flex-column name"><h1 class="name-blue">Karma</h1>
-              <h3 class="text-outline">Role</h3>
-              </span>
-          </div>
-          <div class="player-description">
-            Insert description
-          </div>
+<!--John-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="https://yt3.ggpht.com/-LrkU1bbwfrY/AAAAAAAAAAI/AAAAAAAAAAA/ooVewW7yTeI/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>Karma</b>
+		  <br>
+		  <a class="w3-center w3-opacity">CEO & Designer</a>
+		  </p>
+        </div>
       </div>
-<!--Ellan's Slide-->
-    <div id="EllanSlide" class="player-slide">
-          <div class="player-banner">
-            <img src="https://yt3.ggpht.com/-AK414zmZQM0/AAAAAAAAAAI/AAAAAAAAAAA/DT-QVMzI5ks/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Ellan"><!--
-            --><span class="flex-column name"><h1 class="name-yellow">Ellan</h1>
-              <h3 class="text-outline">Website Maintenance</h3>
-              </span>
-          </div>
-          <div class="player-description">
-            uhhhh, Im a csgo player?
-          </div>
-      </div>
-<!-- Liam's Slide-->
-    <div id="LiamSlide" class="player-slide">
-          <div class="player-banner">
-            <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/b6/b65a9433dc32636f4db1469c77bd1d6487d50df2_full.jpg" alt="Liam"><!--
-            --><span class="flex-column name"><h1 class="name-green">Lime</h1>
-            <h3 class="text-outline">Role</h3>
-            </span>
-          </div>
-          <div class="player-description">
-            Insert description
-          </div>
-      </div>
-<!--Sam's Slide-->
-    <div id="SamSlide" class="player-slide">
-          <div class="player-banner">
-            <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/5a/5a63bec34741cc5dee089f37580029577ac76838_full.jpg" alt="Sam"><!--
-            --><span class="flex-column name"><h1 class="name-orange">Fungmunk</h1>
-            <h3 class="text-outline">Role</h3>
-            </span>
-          </div>
-          <div class="player-description">
-            Insert description
-          </div>
-      </div>
-<!--Amir's Slide-->
-    <div id="AmirSlide" class="player-slide">
-          <div class="player-banner">
-            <img src="https://yt3.ggpht.com/-csXVkIwpxJo/AAAAAAAAAAI/AAAAAAAAAAA/LxGMTChG4pU/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Amir"><!--
-            --><span class="flex-column name"><h1 class="text-outline">max99</h1>
-              <h3 class="text-outline">Role</h3>
-              </span>
-          </div>
-          <div class="player-description">
-            Insert description
-          </div>
-      </div>
-<!--Sean's Slide-->
-    <div id="SeanSlide" class="player-slide">
-          <div class="player-banner">
-            <img src="https://yt3.ggpht.com/-oYwb6vkPxqk/AAAAAAAAAAI/AAAAAAAAAAA/XFoktafdHnM/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Sean"><!--
-            --><span class="flex-column name"><h1 class="text-outline">BuchoySC</h1>
-              <h3 class="text-outline">Role</h3>
-            </span>
-          </div>
-          <div class="player-description">
-            Insert description
-          </div>
-      </div>
-  </div>
-      <!--CAROUSEL BUTTONS-->
-    <div style="position: absolute; width: 100%;">
-      <div class="arrow left absolute"><img class="rotate180"src="Assets/arrow.png" width="32px"></div>
-      <div class="arrow right absolute"><img src="Assets/arrow.png" width="32px"></div>
     </div>
-  </div>
-<!--CAROUSEL END-->
-<!--Notice of Joining-->
+<!--Ellan-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="https://yt3.ggpht.com/-AK414zmZQM0/AAAAAAAAAAI/AAAAAAAAAAA/DT-QVMzI5ks/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Ellan" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>PlacidBeetle</b>
+		  <br>
+		  <a class="w3-center w3-opacity">Dedicated Coder</a>
+		  </p>
+        </div>
+      </div>
+    </div>
+<!-- Liam-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/b6/b65a9433dc32636f4db1469c77bd1d6487d50df2_full.jpg" alt="Liam" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>Lime</b>
+		  <br>
+		  <a class="w3-center w3-opacity" style="font-size: 12px">Website Designer & Coder</a>
+		  </p>
+        </div>
+      </div>
+    </div>
+<!--Sams One-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/5a/5a63bec34741cc5dee089f37580029577ac76838_full.jpg" alt="Sma" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>FungMunk</b>
+		  <br>
+		  <a class="w3-center w3-opacity">Proud Member</a>
+		  </p>
+        </div>
+      </div>
+    </div>
+<!--Amir-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="https://yt3.ggpht.com/-csXVkIwpxJo/AAAAAAAAAAI/AAAAAAAAAAA/LxGMTChG4pU/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Amir" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>Crazy</b>
+		  <br>
+		  <a class="w3-center w3-opacity">Salesman</a>
+		  </p>
+        </div>
+      </div>
+    </div>
+<!--Sean-->
+    <div class="w3-col m2 w3-padding">
+      <div style="background-color: #2C2F33;">
+        <img src="https://yt3.ggpht.com/-oYwb6vkPxqk/AAAAAAAAAAI/AAAAAAAAAAA/XFoktafdHnM/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Sean" style="width:100%">
+        <div class="w3-container">
+          <p class="w3-center">
+		  <b>BuchoySC<b>
+		  <br>
+		  <a class="w3-center w3-opacity">Proud Member</a>
+		  </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <section class="w3-row">
    <div>
      
    </div>
   </section>
 <!--FOOTER YEAH :D-->
-<footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33;" class="w3-col w3-container">
+<footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33;" class="w3-col w3-container w3-margin-top">
      <div style="width: 100%px; font-size: 24px;"class="w3-padding-16 w3-container w3-center">
 	     <nav class="s3 w3-topnav">
             <a href="About.html">About</a>

@@ -1,0 +1,10 @@
+Plan for the Website
+--------------------
+Ellan - Might Have to make another repository for the signup page. Just so i can store up more database
+for users and prevent other people from hacking into their accounts. Unless they find the new repository 
+website of course lol. - As of right now Im learning python for the time being. For year 11 DTC and so on,
+so i cant guarantee this will be up and running.
+================================================
+But I will be trying to learn PHP or SQl or see which is a better database language in my own free time.
+---------------------
+Liam -

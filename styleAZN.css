@@ -1,133 +1,36 @@
 @charset "utf-8";
 /* Home Page CSS */
+* {padding: 0; margin: 0;}
+/*Overview Profile CSS*/
+
+/*BLACK TEXT CSS*/
+.black-text{
+     color: black;
+	 font-family: Verdana;
+}
+/*blank css*/
+.blank {
+     background-color: #414347;
+	 width: 100%;
+	 height: 1000px;
+	 margin-top: 0;
+}
+/*LOGO CSSS*/
 .LOGO {
-      width: 200px;
-	  height: 200px;
-	  display: block;
-	  margin: auto;
-}
-/*Column Right CSS*/
-.right {
-      float: right;
-	  border: 3px solid #303233;
-	  margin-top: 25px;
-	  max-width: 860px;
-	  width: 860px;
-	  height: 600px;
-	  background-color: #303233;
-	  border-radius: 8px;
-}
-#ttitle {
-      text-align: center;
-	  background-color: #303233;
-	  margin: 0;
-	  padding: 0;
-	  font-family: sans-serif;
-}
-.thread {
-	  background-color: #28292b;
-	  margin: auto;
-	  width: 810px;
-	  max-width: 810px;
-	  height: 92px;
-	  overflow: hidden;
-	  border-radius: 8px;
-}
-#discord {
-      margin-top: 300px;
-	  border: 3px solid #303233;
-	  border-radius: 8px;
-}
-.top {
-      
-}
-/*Column Left CSS*/
-.topplayers {
-      float: left;
-	  border: 3px solid #303233;
-	  margin-top: 25px;
-	  max-width: 300px;
-	  width: 300px;
-	  height: 300px;
-	  background-color: #28292b;
-	  border-radius: 8px;
-}
-
-/*News CSS*/
-.alert {
-    padding: 20px;
-	border-radius: 8px;
-	font-family: sans-serif;
-    background-color: #28292b;
-    color: white;
-    opacity: 1;
-    transition: opacity 0.6s;
-    margin-bottom: 15px;
-}
-
-.alert.success {background-color: #4CAF50;}
-.alert.info {background-color: #2196F3;}
-
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-
-/* Navigation Bar CSSS */
-ul {
-    list-style-type: none;
-	width: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #28292b;
-	font-family: sans-serif;
-	font-size: 24px;
-	border-radius: 8px;
-}
-
-li {
-    border-right: 1px solid #bbb;
-    float: left;
-}
-li:last-child {
-    border-right: none;
-}
-
-li a {
+    width: 200px;
+    height: 200px;
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    margin: auto;
 }
-
-li a:hover:not(.active) {
-    background-color: #0a5d84;
-}
-
-.active {
-    background-color: #595a5b;
-}
-/* Main Box CSS*/
-.middlebox {
-      width: 1200px;
-	  height: 780px;
-      margin: auto;
-	  border: 3px solid gree
-}
+/*BODY CSS*/
 body {
-      background-color: black;
       color: white;
+	  background-color: #414347;
+	  font-family: Verdana;
 }
-
+/*MIDDLE BOX CSS*/
+.middlenav {
+	  width: 80%;
+      margin: auto;
+	  margin-top: 75px;
+}

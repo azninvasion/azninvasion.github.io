@@ -1,0 +1,33 @@
+
+/*BODY CSS*/
+body {
+      color: white;
+	  background-color: #0d0e0f;
+	  font-family: Verdana;
+}
+.headline {
+	  width: 100%;
+}
+/*Specific Shadows*/
+.stream {
+      box-shadow: -11px 11px 35px -5px rgba(0,0,0,0.75);
+}
+.discussion {
+      box-shadow: 9px 11px 40px -5px rgba(0,0,0,0.75);
+}
+.games {
+      box-shadow: -1px 40px 76px -34px rgba(0,0,0,0.75);
+}
+/*Bootstrap CSS*/
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }

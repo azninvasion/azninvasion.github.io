@@ -2,83 +2,125 @@
 <html>
   <head>
       <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="styleAZN.css"/>
-        <link rel="shortcut icon" href="Assets/aZn.png"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styleAZN.css">
+		<link rel="stylesheet" href="css/w3.css">
+        <link rel="shortcut icon" href="Assets/logo.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Lime's code block start-->
+        <link rel="stylesheet" href="css/styleLime.css">
+        <link rel="stylesheet" href="css/customfonts.css">
+
+          <!-- JQuery Google CDN -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <!--For use with timeago.js DOMContentLoaded 
+              <script>
+                  document.addEventListener("DOMContentLoaded", function(event) {
+                      jQuery(document).ready(function() {
+                          jQuery("time.timeago").timeago();
+                      });
+                  });
+              </script-->
+          <script src="jquery/discord.drawer.js"></script> 
+
+        <!-- end -->
        <title>AZN | Asian Invasion</title>
   </head>
   
  <body>
-<div class="middlebox">
- <img class="LOGO" src="Assets/aZn.png" alt="AZN_Logo">
- 
-   <ul>
-    <li><a class="active" href="index.html">Home</a></li>
-	<li><a href="members.html">Members</a></li>
-    <li><a href="discord.html">Discord</a></li>
-    <li style="float:right;"><a href="about.html">About</a></li>
-   </ul>
- 
- <section class="topplayers">
-  
-     <section class="top">
+   
+<!--NAVIGATION BAR CODE-->
+  <div class="w3-top">
+  <ul style="background-color: #2C2F33;" class="w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a style="background-color: #558C89;" class="w3-padding-24 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+  <li> <a style="background-color: #74AFAD;" href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
+  <li class="w3-hide-small"><a href="News.html" class="w3-padding-24 w3-hover-white">News</a></li>
+  <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
+  <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
+  <li class="w3-right w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">About</a></li>
+	<li class="w3-padding-top w3-hide-small">
+	  <button style="background-color: #7289DA; color: #e5e5e5;" class="w3-btn w3-round-large">
+      <a target="_blank" class="w3-hover-none w3-hover-text-white" href="https://discord.gg/vCUqRrt">Discord</a>
+      </button>
+      </li>
+  <li class="w3-padding-top w3-hide-small">
+    <button id="discord-button" class="w3-btn w3-round-large">⮟</button>
+	</li>
+  </ul> 
+    <div id="discord-widget" class="absolute" style="display: none;">
+        <iframe src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+    </div> 
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-animate-top w3-hide w3-hide-large w3-hide-medium">
+    <ul style="border-top: none; background-color: #2C2F33;" class="w3-navbar w3-left-align w3-large">
+      <li><a class="w3-padding-large" href="News.html">News</a></li>
+      <li><a class="w3-padding-large" href="members.html">Members</a></li>
+      <li><a class="w3-padding-large" href="#">Contact</a></li>
+      <li><a class="w3-padding-large" href="#">About</a></li>
+    </ul>
+  </div>
+ </div>
+  <!--MIDDLE COLUMN CODE-->
+<div class="blank">
+<!-- Header -->
+<header style="background-image: url(Assets/example.jpg); height: 950px;" class="w3-opacity-off w3-center w3-padding-128">
+  <h1 class="w3-animate-top w3-margin w3-jumbo">Welcome to AZN</h1>
+  <p class="w3-animate-top w3-xlarge">A Team of Clumsy Players</p>
+  <button style="background-color: #74AFAD;" class="w3-animate-bottom w3-hover-white w3-btn w3-padding-16 w3-large w3-margin-top"><a style="text-decoration: none;" href="News.html">Join Our Fun</a></button>
+  <p style="font-size: 24px;" id="learn-button" class="w3-opacity w3-display-bottommiddle w3-padding-24">Learn More ⮟</p>
+      <script>
+        $("#learn-button").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#learnmore").offset().top
+          }, 450);
+        });
+      </script>
+</header>
+<!--Middle Content-->
+  <div id="learnmore" style="margin: 0;"class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird w3-padding-64">
+        <h1 style="font: 5em BebasNeue, sans-serif;">We are gamers.</h1><h2 style="font: 3em BebasNeue, sans-serif;"><span style="font-size: 2em; position: relative; top:0.15em;">AZN</span> is our team name and we cherish it!</h2>
+        <p class="w3-opacity w3-text-white" style="font-size: 1.1em;">We are a group that focuses on team-based multiplayer games such as CS:GO. However we intend to play a variety of games in the future.
+        We are not good gamers, but we tend to play seriously when it comes to winning.
+        <br>
+        Overall we like to play for fun. 😃</p>
+      </div>
+      <div class="w3-third w3-center">
+        <img style="max-width: 500px;" class="fa fa-anchor w3-padding-64 w3-text-red" src="Assets/logo.png"/>
+      </div>
+    </div>
+  </div>
 
-     <h1 id="ttitle">Top Players </h1>
- 
-     </section>
+<footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33; " class="w3-col w3-container w3-margin-top">
+     <div style="width: 100%px; font-size: 24px;"class="w3-padding-16 w3-container w3-center">
+	     <nav class="s3 w3-topnav">
+            <a href="About.html">About</a>
+            <a href="News.html">News</a>
+            <a href="Members.html">Members</a>
+            <a href="suggest.html">Suggestions</a>
+            <a href="Contact.html">Contact</a>
+         </nav>
 	 
-	 <iframe id="discord" src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="300" height="500" allowtransparency="true" frameborder="0"></iframe>
-     
- </section>
- 
- 
- 
- 
- 
- 
- <section class="right">
-  <h1 id="ttitle">Quick Updates</h1>
-   <section class="thread">
-      <div class="alert">
-
-<div class="alert success">
-  <span class="closebtn">&times;</span>
-  <strong>AZN News!</strong> E.g. We playing Comp at 4:30pm, NZST!
+	 </div>
+      <p style="font-size: 16px; padding: 20px;"class="w3-text-gray 3-container w3-center">© All rights reserved. Copyright AZN Invasion 2016.</p>
+</footer>
 </div>
 
-<div class="alert success">
-  <span class="closebtn">&times;</span>
-  <strong>Stream News!</strong> E.g. Pork Bun has Started Streaming Dota 2 Gameplay!.
-</div>
-
-<div class="alert success">
-  <span class="closebtn">&times;</span>
-  <strong>Random News!</strong> E.g. Trump Elected for President RIP!.
-</div>
-
-<div class="alert info">
-  <strong>Check Back Later!</strong> Thats all the news for now
-</div>
-
+<!--Nav Java for phones-->
 <script>
-var close = document.getElementsByClassName("closebtn");
-var i;
-
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
     }
 }
 </script>
-   </section>
- </div>
- 
- <script>
-  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/57356/script.js');
-</script>
+
 
  </body>
 </html>

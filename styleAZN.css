@@ -1,36 +1,46 @@
 @charset "utf-8";
 /* Home Page CSS */
+.textarea{
+		background-color: #1f1f3a; 
+		color: white;
+		box-sizing: border-box;
+		border: 2px solid white;
+		outline: none;
+		transition: 0.2s;
+		text-decoration: none;
+}
+.textarea:focus{
+
+}
 * {padding: 0; margin: 0;}
 /*Overview Profile CSS*/
-
-/*BLACK TEXT CSS*/
-.black-text{
-     color: black;
-	 font-family: Verdana;
+h1{
+    font: 5em BebasNeue, sans-serif!important;
+}
+/*For Hover Mouses, activates cursor with the hand thing*/
+.cursor {
+    cursor: pointer;
+	/*so we dont have to keep typing style="cursor: pointer;"*/
+}
+/*LAtest News CSS*/
+.midlate {
+     background-color: #414347;
+	 max-width: 1400px;
+	 height: auto;
+	 padding: 20px;
 }
 /*blank css*/
 .blank {
      background-color: #414347;
 	 width: 100%;
-	 height: 1000px;
+	 height: 1100px;
 	 margin-top: 0;
 }
-/*LOGO CSSS*/
-.LOGO {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: auto;
-}
+
 /*BODY CSS*/
 body {
       color: white;
 	  background-color: #414347;
 	  font-family: Verdana;
 }
-/*MIDDLE BOX CSS*/
-.middlenav {
-	  width: 80%;
-      margin: auto;
-	  margin-top: 75px;
-}
+/*Members CSS*/

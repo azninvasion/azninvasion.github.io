@@ -1,0 +1,31 @@
+#nav-dt > li{
+    height: 75px;
+    -webkit-transform: skew(-15deg);
+    -moz-transform: skew(-15deg);
+    -o-transform: skew(-15deg);
+    font: 1.3em BebasNeue;
+}
+#nav-dt > li > a:hover{
+    background-color: #757575;
+    color:white;
+}
+
+#nav-dt{
+    background-color: #424242; 
+    margin:1%;
+}
+.discord-nav-buttons{
+    padding: 24px!important; 
+    background-color: #7289DA!important;
+    height: 75px; 
+    background-position: 8px 24px;
+}
+.discord-nav-buttons:hover{
+    background-color: #7289DA!important;
+    filter: brightness(0.75)!important;
+}
+.cur-pge{
+/*Highlights link to identify which page is current*/
+ background-color: #616161
+}
+/*Experimental Nav named = enav as its my version of the navigation bar.*/

@@ -1,185 +1,265 @@
 ﻿<!doctype html>
 <html>
   <head>
-      <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styleAZNews.css">
-        <link rel="stylesheet" href="css/w3.css">
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AZN | Members</title>
         <link rel="shortcut icon" href="Assets/logo.png"/>
-        <script src="jquery/discord.drawer.js"></script>
-        <title>AZN | Asian Invasion</title>
-        <!-- JQuery Google CDN -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<!--Ellans Help Section-->
-		<!--My Website CSS http://www.w3schools.com/w3css/default.asp-->
-
-        <!-- Lime's code block start-->     
-        <link rel="stylesheet" href="css/styleLime.css">
-        <script src="jquery/discord.drawer.js"></script>
+        <!--STYLESHEETS-->
+          <link rel="stylesheet" href="css/styleLime.css">
+          <link rel="stylesheet" href="css/navbar.css">
+          <link rel="stylesheet" href="styleAZNews.css">
+          <link rel="stylesheet" href="css/w3.css">
+          <style>
+            ul{align-items:center;display:flex;flex-flow:row nowrap;justify-content:space-around;list-style-type:none;}
+            li{cursor: pointer;transition: 0.2s;}
+            #nav-positioner li:nth-child(5){margin-right: auto;}
+            #nav-positioner li:nth-child(6){margin-left: auto;}
+          </style>
+        <!--FONTS-->
+          <link rel="stylesheet" href="css/customfonts.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--SCRIPTS-->
+          <!-- JQuery Google CDN -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script>
+              $(document).ready(function(e){
+                $(".mem-plyerPic").click(function(e){
+                    $(this).parent().prev().addClass('focus');
+                });
+                $(".mem-plyerDesc").click(function(e){
+                  $(".mem-plyerDesc").removeClass('focus');
+                });
+              });
+            </script>
 </head>
- <body>
-   
-   <!--NAVIGATION BAR CODE-->
-  <nav class="w3-top">
-  <ul style="background-color: #2C2F33;" class="w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a style="background-color: #558C89;" class="w3-padding-24 w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">☰</a>
-    </li>
-    <li><a href="index.html" class=" w3-padding-24 w3-hover-white">Home</a></li>
-    <li class="w3-hide-small"><a href="News.html" class=" w3-padding-24 w3-hover-white">News</a></li>
-    <li class="w3-hide-small"><a style="background-color: #74AFAD;" href="members.html" class=" w3-padding-24 w3-hover-white">Members</a></li>
-    <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
-    <li class="w3-right w3-hide-small"><a href="#" class=" w3-padding-24 w3-hover-white">About</a></li>
-    <li class="w3-hide-small"><a target="_blank" style="width: 130px; background-image: url(Assets/spr_1.png);" class="discord-nav-buttons w3-btn w3-hover-text-white" href="https://discord.gg/vCUqRrt"></a></li>
-    <li class="w3-hide-small"><button id="discord-button" class="discord-nav-buttons w3-btn">⮟</button></li>
-  </ul> 
-    <div id="discord-widget" class="absolute" style="display: none;">
-    <iframe src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+<body>
+<!--NAVIGATION BAR CODE-->
+  <div class="w3-top">
+    <div id="nav-positioner">
+      <ul id="nav-dt" class="w3-hide-small w3-hide-medium w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
+        <li class="noskew" style="padding-right: 12px"><img src="http://i.imgur.com/olc3fN0.png" width="145px"></li>
+        <li class="w3-hide-small"><a href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
+        <li class="w3-hide-small"><a href="news.html" class="w3-padding-24 w3-hover-white">News</a></li>
+        <li class="w3-hide-small"><a style="background-color: #74AFAD" href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
+        <li class="w3-hide-small"><a href="contact.html" class="w3-padding-24 w3-hover-white">Contact</a></li>
+        <li class="w3-padding-xlarge w3-hide-small noskew w3-right">
+          <a target='_blank' class="w3-button  w3-hover-white w3-green" style="font-size: 20px;" href="https:/royalsecurity.github.io">Login/SignUp</a>
+        </li>
+        <li class="w3-hide-small noskew w3-right">
+          <a target="_blank" class="discordspr discord-nav-buttons " href="https://discord.gg/vCUqRrt"></a>
+        </li>
+      </ul>
     </div> 
-  
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-animate-top w3-hide w3-hide-large w3-hide-medium">
-    <ul style="border-top: none; background-color: #2C2F33;" class="w3-navbar w3-left-align w3-large">
-      <li><a class="w3-padding-large" href="News.html">News</a></li>
-      <li><a style="background-color: #74AFAD;" class="w3-padding-large" href="members.html">Members</a></li>
-      <li><a class="w3-padding-large" href="#">Contact</a></li>
-      <li><a class="w3-padding-large" href="#">About</a></li>
-    </ul>
+  </div> 
+  	<!-- Navbar on small screens -->
+		<nav class="w3-card-8 w3-large  w3-hide-large w3-sidenav w3-animate-left" style="background-color: #424242; display: none; width:100vw;" id="mySidenav">
+      <a style="position:fixed;background-color: #333; width:100vw;" href="javascript:void(0)" onclick="w3_close()" class="w3-hover-teal w3-closenav w3-xxlarge w3-hide-large">&times;</a>
+			<a style="padding-top:70px;" href="index.html">Home</a>
+			<a href="news.html">News</a>
+			<a href="members.html" class="cur-pge">Members</a>
+			<a href="contact.html">Contact</a>
+			<a class="w3-green"href="https://royalsecurity.github.io">Login/SignUp</a>
+			<!--Discord iframe-->
+			<iframe class="w3-padding" src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
+		</nav>
+	  <div id="sandwich" class="main-bgGreyBlue-90 w3-hide-large">
+			<span class="w3-hide-large w3-padding w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+    </div>
   </div>
- </nav>
   <!--Middle Column Code-->
-  <header class="w3-container w3-center w3-padding-128">
+  <header class="w3-container w3-center" style="padding: 96px 0 32px 0">
    <h1 class="w3-hide-small w3-margin w3-jumbo">MEET THE TEAM</h1>
    <h1 class="w3-hide-large w3-hide-medium w3-margin w3-xxlarge">MEET THE TEAM</h1>
    <hr style="width: 50%; margin: auto;">
     <p class="w3-small">find out who is behind all the fun</p>
   </header>
-  
-  <section class="w3-row" style="width: 70%; margin: auto; background-color: #151719;">
+<div class="w3-center w3-row">
+  <section class="w3-center w3-row flex-row">
    <!--James-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/47/477741bd29f70d81c4658d8c084f65b61fd4d395_full.jpg" alt="James" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>SirFoxy</b>
-		  <br>
-		  <a class="w3-center w3-opacity">Dedicated Founder</a>
-		  </p>
-        </div>
+ <div class="w3-rest" style="width: 67%; height: auto; margin: auto; background-color: #151719;">
+    <div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('james_desc').style.display='block'" style="background-image:url(http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/47/477741bd29f70d81c4658d8c084f65b61fd4d395_full.jpg)">
+        <p class="mem-plyrName">
+		      <b>SirFoxy</b>
+		      <br>
+		      <span class="w3-center w3-opacity">Dedicated Founder</span>
+		    </p>
       </div>
     </div>
+    <div id="james_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>			
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+        </div>
+      </div>
 <!--John-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="https://yt3.ggpht.com/-LrkU1bbwfrY/AAAAAAAAAAI/AAAAAAAAAAA/ooVewW7yTeI/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>Karma</b>
-		  <br>
-		  <a class="w3-center w3-opacity">CEO & Designer</a>
-		  </p>
-        </div>
+<div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('john_desc').style.display='block'" style="background-image:url(https://yt3.ggpht.com/-LrkU1bbwfrY/AAAAAAAAAAI/AAAAAAAAAAA/ooVewW7yTeI/s250-c-k-no-mo-rj-c0xffffff/photo.jpg)">
+        <p class="mem-plyrName">
+		      <b>Karma</b>
+		      <br>
+		      <span class="w3-center w3-opacity">CEO & Designer</span>
+		    </p>
       </div>
     </div>
+    <div id="john_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+          <div class="w3-container mem-plyerSocial">
+            <a href="https://www.youtube.com/channel/UCDqltgWVpJtylyKYBt-jJww" target="_blank"><div class="yt-icn"></div></a>
+          </div>			
+        </div>
+      </div>
 <!--Ellan-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="https://yt3.ggpht.com/-AK414zmZQM0/AAAAAAAAAAI/AAAAAAAAAAA/DT-QVMzI5ks/s100-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Ellan" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>PlacidBeetle</b>
-		  <br>
-		  <a class="w3-center w3-opacity">Dedicated Coder</a>
-		  </p>
+<div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('ellan_desc').style.display='block'" style="background-image:url(https://yt3.ggpht.com/-AK414zmZQM0/AAAAAAAAAAI/AAAAAAAAAAA/DT-QVMzI5ks/s250-c-k-no-mo-rj-c0xffffff/photo.jpg)">
+        <p class="mem-plyrName">
+		      <b>PlacidBeetle</b>
+		        <br>
+		      <span class="w3-center w3-opacity">Dedicated Coder</span>
+		    </p>
         </div>
       </div>
-    </div>
+      <div id="ellan_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>			
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+          <div class="w3-container mem-plyerSocial">
+            <a href="https://www.youtube.com/channel/UCQdto1oacP2xEY_nH4Jsq3w" target="_blank"><div class="yt-icn"></div></a>
+          </div>			
+        </div>
+      </div>
 <!-- Liam-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/b6/b65a9433dc32636f4db1469c77bd1d6487d50df2_full.jpg" alt="Liam" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>Lime</b>
-		  <br>
-		  <a class="w3-center w3-opacity" style="font-size: 12px">Website Designer & Coder</a>
-		  </p>
+    <div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('lime_desc').style.display='block'" style="background:url(http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/b6/b65a9433dc32636f4db1469c77bd1d6487d50df2_full.jpg)">
+        <p class="mem-plyrName">
+		      <b>Lime</b>
+		        <br>
+		      <span class="w3-center w3-opacity">Website Designer & Coder</span>
+		    </p>
         </div>
       </div>
-    </div>
+      <div id="lime_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>			
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+        </div>
+      </div>
 <!--Sams One-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/5a/5a63bec34741cc5dee089f37580029577ac76838_full.jpg" alt="Sma" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>FungMunk</b>
-		  <br>
-		  <a class="w3-center w3-opacity">Proud Member</a>
-		  </p>
-        </div>
+    <div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('sam_desc').style.display='block'" style="background-image:url(http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/5a/5a63bec34741cc5dee089f37580029577ac76838_full.jpg)">
+        <p class="mem-plyrName">
+		      <b>FungMunk</b>
+		      <br>
+		      <span class="w3-center w3-opacity">Proud Member</span>
+		    </p>
       </div>
     </div>
+    <div id="sam_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>			
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+        </div>
+      </div>
 <!--Amir-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="https://yt3.ggpht.com/-csXVkIwpxJo/AAAAAAAAAAI/AAAAAAAAAAA/LxGMTChG4pU/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Amir" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>Crazy</b>
-		  <br>
-		  <a class="w3-center w3-opacity">Salesman</a>
-		  </p>
-        </div>
+    <div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('amir_desc').style.display='block'" style="background: url(https://yt3.ggpht.com/-csXVkIwpxJo/AAAAAAAAAAI/AAAAAAAAAAA/LxGMTChG4pU/s250-c-k-no-mo-rj-c0xffffff/photo.jpg);">
+        <p class="mem-plyrName">
+		      <b>Max99</b>
+		      <br>
+		      <span class="w3-center w3-opacity">Salesman</span>
+		    </p>
       </div>
     </div>
+    <div id="amir_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>			
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+          <div class="w3-container mem-plyerSocial">
+            <a href="https://www.youtube.com/channel/UCAbFj4Ruer9bazV3k6efPJQ" target="_blank"><div class="yt-icn"></div></a>
+          </div>
+        </div>
+      </div>
 <!--Sean-->
-    <div class="w3-col m2 w3-padding">
-      <div style="background-color: #2C2F33;">
-        <img src="https://yt3.ggpht.com/-oYwb6vkPxqk/AAAAAAAAAAI/AAAAAAAAAAA/XFoktafdHnM/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Sean" style="width:100%">
-        <div class="w3-container">
-          <p class="w3-center">
-		  <b>BuchoySC<b>
-		  <br>
-		  <a class="w3-center w3-opacity">Proud Member</a>
-		  </p>
-        </div>
+    <div style="display: inline-flex">
+      <div class="mem-plyerPic w3-hover-opacity" onclick="document.getElementById('sean_desc').style.display='block'"style="background:url(https://yt3.ggpht.com/-oYwb6vkPxqk/AAAAAAAAAAI/AAAAAAAAAAA/XFoktafdHnM/s250-c-k-no-mo-rj-c0xffffff/photo.jpg)">
+        <p class="mem-plyrName">
+		      <b>BuchoySC</b>
+		      <br>
+		      <span class="w3-center w3-opacity">Proud Member</span>
+		    </p>
       </div>
     </div>
-  </section>
-  
-  <section class="w3-row">
-   <div>
-     
-   </div>
-  </section>
+    <div id="sean_desc" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-card-8">
+          <div class="w3-container" style="height:125px;">
+            <h1 style="color: black;"></h1>
+          </div>			
+          <div class="w3-container w3-blue">
+            <p>DESCRIPTION</p>
+          </div>
+          <div class="w3-container mem-plyerSocial">
+            <a href="https://www.youtube.com/channel/UCUzUBwVrtrRS1zkESAM0DbA" target="_blank"><div class="yt-icn"></div></a>
+          </div>
+        </div>
+      </div>
+</section>
 <!--FOOTER YEAH :D-->
-<footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33;" class="w3-col w3-container w3-margin-top">
+<footer style="color: white; width: 100%; height: 200px; margin-top: 220px; background-color: #2C2F33; " class="w3-col w3-container">
      <div style="width: 100%px; font-size: 24px;"class="w3-padding-16 w3-container w3-center">
 	     <nav class="s3 w3-topnav">
-            <a href="About.html">About</a>
-            <a href="News.html">News</a>
-            <a href="Members.html">Members</a>
-            <a href="suggest.html">Suggestions</a>
-            <a href="Contact.html">Contact</a>
+            <a href="contact.html">About</a>
+            <a href="news.html">News</a>
+            <a href="members.html">Members</a>
+            <a href="contact.html">Contact</a>
          </nav>
-	 
-	 </div>
+	  </div>
       <p style="font-size: 16px; padding: 20px;"class="w3-text-gray 3-container w3-center">© All rights reserved. Copyright AZN Invasion 2016.</p>
 </footer>
-
 <!--Nav Java-->
 <script>
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
 }
 </script>
- 
- </body>
+</body>
+</html> Java-->
+<script>
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+</body>
 </html>

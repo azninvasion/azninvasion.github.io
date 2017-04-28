@@ -1,120 +1,199 @@
 <!doctype html>
 <html>
   <head>
-      <meta charset="utf-8">
+    <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styleAZN.css">
-		<link rel="stylesheet" href="css/w3.css">
+        <title>AZN | Asian Invasion</title>
         <link rel="shortcut icon" href="Assets/logo.png"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Lime's code block start-->
-        <link rel="stylesheet" href="css/styleLime.css">
-        <link rel="stylesheet" href="css/customfonts.css">
-
+        <!--STYLESHEETS-->
+          <link rel="stylesheet" href="css/styleLime.css">
+          <link rel="stylesheet" href="css/navbar.css">
+          <link rel="stylesheet" href="styleAZN.css">
+          <link rel="stylesheet" href="css/w3.css">
+          <style>
+            body::-webkit-scrollbar{
+              display: none;
+            }
+            @media (max-width:601px){
+              p{font-size:3vw;}
+            }
+            p{color:#999}
+            b{color:#bbb}
+            @media (max-width:601px){.azn-skbutton{padding:3.5%;font-size:4.3vw!important;width:auto!important}}
+            ul{align-items:center;display:flex;flex-flow:row nowrap;justify-content:space-around;list-style-type:none;}
+            li{cursor: pointer;transition: 0.2s;}
+            #nav-positioner li:nth-child(5){margin-right: auto;}
+            #nav-positioner li:nth-child(6){margin-left: auto;}
+          </style>
+        <!--FONTS-->
+          <link rel="stylesheet" href="css/customfonts.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <!--SCRIPTS-->
           <!-- JQuery Google CDN -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-          <!--For use with timeago.js DOMContentLoaded 
-              <script>
-                  document.addEventListener("DOMContentLoaded", function(event) {
-                      jQuery(document).ready(function() {
-                          jQuery("time.timeago").timeago();
-                      });
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <!--Snap scroller
+            <script>
+              $(document).ready(function(){ 
+                $("#learn-button").click(function() {
+                  $('html, body').animate({scrollTop: $("#learnmore").offset().top}, 170);
+                });
+              });
+              $(function () {
+                  var lastScroll = $(window).scrollTop();
+                  $(window).scroll(function () {
+                      var scrollTop = $(window).scrollTop();
+                      var divTop = $("#learnmore").offset().top;
+                      if ( scrollTop > lastScroll && scrollTop <= 50 ) {
+                          $('body').stop().animate({
+                              scrollTop: divTop
+                          }, 170);
+                      }
+                      lastScroll = scrollTop;
                   });
-              </script-->
-          <script src="jquery/discord.drawer.js"></script> 
-
-        <!-- end -->
-       <title>AZN | Asian Invasion</title>
-  </head>
-  
- <body>
-   
+                $(window).on('beforeunload', function(){
+                  $(window).scrollTop(0);
+                });
+              });
+            </script-->
+</head>
+<body>
 <!--NAVIGATION BAR CODE-->
   <div class="w3-top">
-  <ul style="background-color: #2C2F33;" class="w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-      <a style="background-color: #558C89;" class="w3-padding-24 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    </li>
-    <li> <a style="background-color: #74AFAD;" href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
-    <li class="w3-hide-small"><a href="News.html" class="w3-padding-24 w3-hover-white">News</a></li>
-    <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
-    <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
-    <li class="w3-right w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">About</a></li>
-    <li class="w3-hide-small"><a target="_blank" style="width: 130px; background-image: url(Assets/spr_1.png);" class="discord-nav-buttons w3-btn w3-hover-text-white" href="https://discord.gg/vCUqRrt"></a></li>
-    <li class="w3-hide-small"><button id="discord-button" class="discord-nav-buttons w3-btn">⮟</button></li>
-  </ul> 
-    <div id="discord-widget" class="absolute" style="display: none;">
-        <iframe src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-    </div> 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-animate-top w3-hide w3-hide-large w3-hide-medium">
-    <ul style="border-top: none; background-color: #2C2F33;" class="w3-navbar w3-left-align w3-large">
-      <li><a class="w3-padding-large" href="News.html">News</a></li>
-      <li><a class="w3-padding-large" href="members.html">Members</a></li>
-      <li><a class="w3-padding-large" href="#">Contact</a></li>
-      <li><a class="w3-padding-large" href="#">About</a></li>
-    </ul>
-  </div>
- </div>
+    <div id="nav-positioner">
+      <ul id="nav-dt" class="w3-hide-small w3-hide-medium w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
+        <li class="noskew" style="padding-right: 12px"><img src="http://i.imgur.com/olc3fN0.png" width="145px"></li>
+        <li class="w3-hide-small"><a style="background-color: #74AFAD"href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
+        <li class="w3-hide-small"><a href="news.html" class="w3-padding-24 w3-hover-white">News</a></li>
+        <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
+        <li class="w3-hide-small"><a href="contact.html" class="w3-padding-24 w3-hover-white">Contact</a></li>
+        <li class="w3-padding-xlarge w3-hide-small noskew w3-right">
+          <a target='_blank' class="w3-button  w3-hover-white w3-green" style="font-size: 20px;" href="http:/royalsecurity.github.io">Login/SignUp</a>
+        </li>
+        <li class="w3-hide-small noskew w3-right">
+          <a target="_blank" class="discordspr discord-nav-buttons " href="https://discord.gg/vCUqRrt"></a>
+        </li>
+      </ul>
+    </div>
+  	<!-- Navbar on small screens -->
+		<nav class="w3-card-8 w3-large w3-hide-large w3-sidenav w3-animate-left" style="background-color: #424242; display: none; width:100vw;" id="mySidenav">
+      <a style="position:fixed;background-color: #333; width:100vw;" href="javascript:void(0)" onclick="w3_close()" class="w3-hover-teal w3-closenav w3-xxlarge w3-hide-medium w3-hide-large">&times;</a>
+			<a style="padding-top:70px;" href="index.html">Home</a>
+			<a href="news.html" class="cur-pge">News</a>
+			<a href="members.html">Members</a>
+			<a href="contact.html">Contact</a>
+			<a class="w3-green" href="http:/royalsecurity.github.io">Login/SignUp</a>
+			<!--Discord iframe-->
+			<iframe class="w3-padding" src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
+		</nav>
+	  <div id="sandwich" class="main-bgGreyBlue-90 w3-hide-large">
+			<span class="w3-hide-large w3-padding w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+    </div>
+</div>
   <!--MIDDLE COLUMN CODE-->
-<div class="blank">
 <!-- Header -->
-<header style="background-image: url(Assets/example.jpg); height: 950px;" class="w3-opacity-off w3-center w3-padding-128">
-  <h1 class="w3-animate-top w3-margin w3-jumbo">Welcome to AZN</h1>
-  <p class="w3-animate-top w3-xlarge">A Team of Clumsy Players</p>
-  <button style="background-color: #74AFAD;" class="w3-animate-bottom w3-hover-white w3-btn w3-padding-16 w3-large w3-margin-top"><a style="text-decoration: none;" href="News.html">Join Our Fun</a></button>
-  <p style="font-size: 24px;" id="learn-button" class="w3-opacity w3-display-bottommiddle w3-padding-24">Learn More ⮟</p>
-      <script>
-        $("#learn-button").click(function() {
-          $('html, body').animate({
-              scrollTop: $("#learnmore").offset().top
-          }, 450);
-        });
-      </script>
-</header>
-<!--Middle Content-->
-  <div id="learnmore" style="margin: 0;"class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-content">
-      <div class="w3-twothird w3-padding-64">
-        <h1 style="font: 5em BebasNeue, sans-serif;">We are gamers.</h1><h2 style="font: 3em BebasNeue, sans-serif;"><span style="font-size: 2em; position: relative; top:0.15em;">AZN</span> is our team name and we cherish it!</h2>
-        <p class="w3-opacity w3-text-white" style="font-size: 1.1em;">We are a group that focuses on team-based multiplayer games such as CS:GO. However we intend to play a variety of games in the future.
-        We are not good gamers, but we tend to play seriously when it comes to winning.
+<header style="background-image: url(http://i.imgur.com/owiAPGA.jpg);height: 100vh;padding: 12vh 0;" class="background w3-opacity-off w3-center">
+  <div class="main-bgGreyBlue-50 w3-animate-bottom" style="max-width:75%;font-family:Cabin, sans-serif;white-space:nowrap">
+    <!--DESKTOP-->
+    <div class="w3-hide-small">
+      <h1 id="banner-text" class="w3-margin w3-jumbo w3-hide-small" style="padding-top: 6vh">Welcome to AZN</h1>
+      <p class="w3-xlarge">A Team of Clumsy Players</p>
+    </div>
+    <!--MOBILE-->
+    <div class="w3-hide-medium w3-hide-large">
+      <h1 id="banner-text" class="w3-hide-medium w3-hide-large" style="padding-top: 10%;font-size: 12vw!important">Welcome to AZN</h1>
+      <p class="w3-xlarge" style="font-size: 5vw!important">A Team of Clumsy Players</p>
+    </div>
+    <button class="azn-skbutton"style="margin-top:1.75vh;"><a style="text-decoration: none;" href="news.html">Join Our Fun</a></button>
+    <div class="main-bgBlack-35" style="position:relative;text-align: center;padding:32px 16px 45px;margin-top:5vh;border-top:1px rgba(86,84,89,0.4) solid!important; border:0;">
+    <!--DESKTOP-->
+      <div class="w3-hide-small w3-hide-medium">
+        <h2 style="font: 500 2.2em 'Cabin', sans-serif">We are gamers.</h2>
+        <p style="font-size: 1.7vw!important">
+          <span style="position: relative; top:0.05em;">AZN</span>
+             is our team name and we cherish it!</p>
+             <br>
+        <p style="font-size: 2.2vh">We are a small eSports group that focuses on <wbr>team-based multiplayer games such as: 
+        <br><b>Counter-Strike</b>, <b>Overwatch</b> and <b>Rocket League</b>.<br>We are not good gamers, but we play our best<wbr> when it comes to winning.
         <br>
-        Overall we like to play for fun. 😃</p>
+          Overall we like to play for fun. 😃</p>
       </div>
-      <div class="w3-third w3-center">
-        <img style="max-width: 500px;" class="fa fa-anchor w3-padding-64 w3-text-red" src="Assets/logo.png"/>
+    <!--MOBILE-->
+      <div class="w3-hide-large" style="font-size: 80%; padding: 0!important">
+        <h2 style="font: 500 2.2em 'Cabin', sans-serif">We are gamers.</h2>
+          <p>
+            <span style="position: relative; top:0.05em;">AZN</span>
+              is our team name and we cherish it!</p>
+              <br>
+          <p>We are a small eSports group that focuses on <wbr>team-based multiplayer games such as: 
+          <br><b>Counter-Strike</b>, <b>Overwatch</b> and <b>Rocket League</b>.<br>We are not good gamers, but we play our best<wbr> when it comes to winning.
+          <br>
+            Overall we like to play for fun. 😃</p>
+        </div>
       </div>
+</header>
+  <style>
+     @media (max-width:601px){h2{font-size: 3.8vw;font-weight: 600}p{font-size: 2.5vw;}}
+  </style>
+  <div id="main-btmHlf" style="background-image: url(http://i.imgur.com/LUXej9P.jpg);height:100vh;" class="w3-padding-64 w3-container background">
+    <div class="w3-content main-bgGreyBlue-50" style="margin-top:145px;">
+        <ul class="w3-center flex-row w3-row" style="margin-top:2px;">
+          <li class="azn-img-hover-dark azn-brdr-dark01 main-news-pack w3-col w3-center" style="background:url(Assets/main-newstest.jpg) no-repeat center;">
+            <div class="main-bgGreyBlue-90" style='width:100%;position:absolute;bottom:0px;height:45%;'>
+              <h2>NEWS HEADER</h2>
+              <p>Brief Summary of the news</p>
+            </div>
+          </li>
+          <li class="azn-img-hover-dark azn-brdr-dark01 main-news-pack w3-col w3-center" style="background:url(Assets/main-newstest.jpg) no-repeat center;">
+            <div class="main-bgGreyBlue-90" style='width:100%;position:absolute;bottom:0px;height:45%;'>
+              <h2>NEWS HEADER</h2>
+              <p>Brief Summary of the news</p>
+            </div>
+          </li>
+          <li class="azn-img-hover-dark azn-brdr-dark01 main-news-pack w3-col w3-center" style="background:url(Assets/main-newstest.jpg) no-repeat center;">
+            <div class="main-bgGreyBlue-90" style='width:100%;position:absolute;bottom:0px;height:45%;'>
+              <h2>NEWS HEADER</h2>
+              <p>Brief Summary of the news</p>
+            </div>
+          </li>
+        </ul>
+   <!--the Parralllelgorammam lol-->
+    <header class="w3-center" style="padding: 16px;">
+            <!--DESKTOP--><a href="news.html" class="w3-hide-small" style="text-decoration: none; font-family: BebasNeue, sans-serif;">
+              <div style="background-color: #74AFAD;font-size:1.5em!important" class="cursor w3-btn w3-card-8 w3-center w3-animate-bottom w3-hover-white w3-padding paralview w3-large">
+                VIEW ALL NEWS +
+              </div>
+            </a>
+			      <!--MOBILE--><a href="news.html" class="w3-hide-large w3-hide-medium" style="text-decoration: none; font-family: BebasNeue, sans-serif;">
+              <div style="background-color: #74AFAD;font-size: 1.5em!important" class="cursor w3-card-8 w3-center w3-animate-bottom w3-hover-white w3-padding paralview w3-large">
+                VIEW ALL NEWS +
+              </div>
+            </a> 
+    </header>
     </div>
   </div>
-
-<footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33; " class="w3-col w3-container w3-margin-top">
+<!--FOOTER-->
+<footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33; border-top:32%;" class="w3-col w3-container">
      <div style="width: 100%px; font-size: 24px;"class="w3-padding-16 w3-container w3-center">
 	     <nav class="s3 w3-topnav">
-            <a href="About.html">About</a>
-            <a href="News.html">News</a>
-            <a href="Members.html">Members</a>
-            <a href="suggest.html">Suggestions</a>
-            <a href="Contact.html">Contact</a>
+            <a href="contact.html">About</a>
+            <a href="news.html">news</a>
+            <a href="members.html">Members</a>
+            <a href="contact.html">Contact</a>
          </nav>
 	 
 	 </div>
       <p style="font-size: 16px; padding: 20px;"class="w3-text-gray 3-container w3-center">© All rights reserved. Copyright AZN Invasion 2016.</p>
 </footer>
 </div>
-
-<!--Nav Java for phones-->
+<!--Nav Java-->
 <script>
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
 }
 </script>
-
-
  </body>
 </html>

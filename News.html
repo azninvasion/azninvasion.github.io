@@ -1,78 +1,86 @@
 <!doctype html>
 <html>
   <head>
-      <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styleAZNews.css">
-        <link rel="stylesheet" href="css/w3.css">
-        <link rel="shortcut icon" href="Assets/logo.png"/>
+    <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AZN | News</title>
+        <link rel="shortcut icon" href="Assets/logo.png"/>
+        <!--STYLESHEETS-->
+          <link rel="stylesheet" href="css/styleLime.css">
+          <link rel="stylesheet" href="css/navbar.css">
+          <link rel="stylesheet" href="styleAZNews.css">
+          <link rel="stylesheet" href="css/w3.css">
+          <style>
+            ul{align-items:center;display:flex;flex-flow:row nowrap;justify-content:space-around;list-style-type:none;}
+            li{cursor: pointer;transition: 0.2s;}
+            #nav-positioner li:nth-child(5){margin-right: auto;}
+            #nav-positioner li:nth-child(6){margin-left: auto;}
+          </style>
+        <!--FONTS-->
+          <link rel="stylesheet" href="css/customfonts.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--SCRIPTS-->
+          <!-- JQuery Google CDN -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <!-- GOTO http://www.timestampgenerator.com FOR ISO TIME! USE GMT+12 -->
+          <!-- TIME AGO EXAMPLE <time class="timeago" datetime="2016-10-28T12:35:46Z" title="29 Oct 2016">...</time> use ellipses as if an error occurs it won't actually show a date -->
+            <script src="scripts/jquery.timeago.js" type="text/javascript"></script>
+            <script src="scripts/news-article.js"></script>
+          <!--For use with timeago.js DOMContentLoaded--> 
+            <script>
+              document.addEventListener("DOMContentLoaded", function(event) {
+                jQuery(document).ready(function() {
+                  jQuery("time.timeago").timeago();
+                });
+              });
+            </script>
 		<!--Ellans Help Section-->
-		<!-- Added a few animation css and classes for you Liam -->
         <!-- Lime's code block start-->
         <style>
           h1{
             padding-top: 0.2em;
             font: 4em BebasNeue, sans-serif;
           }
-        </style>
-        <!-- JQuery Google CDN -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-                
-        <link rel="stylesheet" href="css/styleLime.css">
-        <link rel="stylesheet" href="css/customfonts.css">
-
-        <!-- GOTO http://www.timestampgenerator.com FOR ISO TIME! USE GMT+12 -->
-          <!-- TIME AGO EXAMPLE <time class="timeago" datetime="2016-10-28T12:35:46Z" title="29 Oct 2016">...</time> use ellipses as if an error occurs it won't actually show a date -->
-          <script src="jquery/jquery.timeago.js" type="text/javascript"></script>
-          <script src="jquery/discord.drawer.js"></script>
-          <script src="jquery/news-article.js"></script>
-          <!--For use with timeago.js DOMContentLoaded--> 
-              <script>
-                  document.addEventListener("DOMContentLoaded", function(event) {
-                      jQuery(document).ready(function() {
-                          jQuery("time.timeago").timeago();
-                      });
-                  });
-              </script>
-        <!-- end -->
-  </head>
-  
- <body>
-   
+        </style>     
+</head>
+<body>  
 <!--NAVIGATION BAR CODE-->
   <div class="w3-top">
-  <ul style="background-color: #2C2F33;" class="w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
-    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right"><a style="background-color: #558C89;" class="w3-padding-24 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a></li>
-    <li class="w3-hide-small"> <a href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
-    <li ><a style="background-color: #74AFAD;" href="News.html" class="w3-padding-24 w3-hover-white">News</a></li>
-    <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
-    <li class="w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">Contact</a></li>
-    <li class="w3-right w3-hide-small"><a href="#" class="w3-padding-24 w3-hover-white">About</a></li>
-    <li class="w3-hide-small"><a target="_blank" style="width: 130px; background-image: url(Assets/spr_1.png);" class="discord-nav-buttons w3-btn w3-hover-text-white" href="https://discord.gg/vCUqRrt"></a></li>
-    <li class="w3-hide-small"><button id="discord-button" class="discord-nav-buttons w3-btn">⮟</button></li>
-  </ul> 
-  <div id="discord-widget" class="absolute" style="display: none;">
-    <iframe src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-  </div> 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-animate-top w3-hide w3-hide-large w3-hide-medium">
-    <ul style="border-top: none; background-color: #2C2F33;" class="w3-navbar w3-left-align w3-large">
-      <li><a style="background-color: #74AFAD;" class="w3-padding-large" href="News.html">News</a></li>
-      <li><a class="w3-padding-large" href="members.html">Members</a></li>
-      <li><a class="w3-padding-large" href="#">Contact</a></li>
-      <li><a class="w3-padding-large" href="#">About</a></li>
-    </ul>
-  </div>
- </div>
-<!--MASTHEAD-->
-  <div class="w3-card-2" style="position:relative; z-index: 98; background-color: #5c5e5f;">
-    <div style="height: 75px; opacity: 0;">
+    <div id="nav-positioner">
+      <ul id="nav-dt" class="w3-hide-small w3-hide-medium w3-animate-top w3-navbar w3-card-2 w3-left-align w3-large">
+        <li class="noskew" style="padding-right: 12px"><img src="http://i.imgur.com/olc3fN0.png" width="145px"></li>
+        <li class="w3-hide-small"><a href="index.html" class="w3-padding-24 w3-hover-white">Home</a></li>
+        <li class="w3-hide-small"><a style="background-color: #74AFAD" href="news.html" class="w3-padding-24 w3-hover-white">News</a></li>
+        <li class="w3-hide-small"><a href="members.html" class="w3-padding-24 w3-hover-white">Members</a></li>
+        <li class="w3-hide-small"><a href="contact.html" class="w3-padding-24 w3-hover-white">Contact</a></li>
+        <li class="w3-padding-xlarge w3-hide-small noskew w3-right">
+          <a target='_blank' class="w3-button  w3-hover-white w3-green" style="font-size: 20px;" href="https:/royalsecurity.github.io">Login/SignUp</a>
+        </li>
+        <li class="w3-hide-small noskew w3-right">
+          <a target="_blank" class="discordspr discord-nav-buttons " href="https://discord.gg/vCUqRrt"></a>
+        </li>
+      </ul>
     </div>
-    <header class="headline w3-container w3-theme w3-padding" id="myHeader">
-      <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i>
+  	<!-- Navbar on small screens -->
+		<nav class="w3-card-8 w3-large w3-hide-large w3-sidenav w3-animate-left" style="background-color: #424242; display: none; width:100vw;" id="mySidenav">
+      <a style="position:fixed;background-color: #333; width:100vw;" href="javascript:void(0)" onclick="w3_close()" class="w3-hover-teal w3-closenav w3-xxlarge w3-hide-medium w3-hide-large">&times;</a>
+			<a style="padding-top:70px;" href="index.html">Home</a>
+			<a href="news.html" class="cur-pge">News</a>
+			<a href="members.html">Members</a>
+			<a href="contact.html">Contact</a>
+			<a class="w3-green"href="https://royalsecurity.github.io">Login/SignUp</a>
+			<!--Discord iframe-->
+			<iframe class="w3-padding" src="https://discordapp.com/widget?id=173216475027341312&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
+		</nav>
+	  <div id="sandwich" class="main-bgGreyBlue-90 w3-hide-large">
+			<span class="w3-hide-large w3-padding w3-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+    </div>
+</div>
+<!--MASTHEAD-->
+  <div class="w3-card-2 w3-hide-small" style="position:relative; z-index: 98; background-color: #5c5e5f;">
+    <header class="headline w3-container w3-theme" style="padding-top: 75px" id="myHeader">
       <div class="w3-center">
-      <h1 class="w3-xxxlarge w3-animate-bottom">Main Headline</h1>
+      <h1 class="w3-xxxlarge w3-animate-bottom" style="padding-top: 32px">Main Headline</h1>
       </div>
     </header>
     <div class="w3-center w3-row">
@@ -85,15 +93,47 @@
       <button style="margin: 11px; background-color: #74AFAD;" class="w3-hover-white w3-round w3-btn w3-large">Learn More!</button>
     </div>
   </div>
-
+<!--MOBILE PADDING FIX-->
+  <div class="w3-card-2 w3-hide-large w3-hide-medium" style="position:relative; z-index: 98; background-color: #5c5e5f;">
+    <header class="headline w3-container w3-theme" style="padding-top: 135px"  id="myHeader">
+      <div class="w3-center">
+      <h1 class="w3-xxxlarge w3-animate-bottom" style="padding-top: 32px">Main Headline</h1>
+      </div>
+    </header>
+    <div class="w3-center w3-row">
+     <div class="w3-container w3-center w3-round w3-blue-grey w3-padding-8 relative" style="width: 50%; margin: auto;">
+        <p style="margin: 0">
+          <span class="w3-container w3-green w3-round w3-tag">New Member</span>
+          We would like to announce the newest, and worst new member in aZn: <em class="text-outline text-no-style">BuchoySC</em>! WOOO much enthusiasm
+        </p>
+      </div>
+      <button style="margin: 11px; background-color: #74AFAD;" class="w3-hover-white w3-round w3-btn w3-large">Learn More!</button>
+    </div>
+  </div>
 <!--News Section BOY-->
-<div id="side-margins" style="margin: 0 150px;">
+<ul id="side-margins" style="margin: 0 150px;">
   <div class="flex-row" style="background-color:#353638">
-  <div class="w3-row"  style="display: inline-flex;" id="news-main-positioner">
+  <div class="w3-row"  style="display: inline-flex;position:relative;" id="news-main-positioner">
     <!--News Update, takes left half of page, may be headlines instead of videos-->
-    <div id="main-1" data-article="1" data-main="1" class="w3-twothird focus article">
-      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
-          <span class="article-banner-positioner">
+    <div id="main-1" data-article="1" data-main="1" class="focus article" style="position:absolute;">
+      <div class="intrinsic-container w3-animate-bottom w3-display-container">
+          <iframe src="https://www.youtube.com/embed/nFv7B97x1F4" frameborder="0" allowfullscreen ></iframe>
+        </span>
+      </div>
+      <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
+            <span class="w3-container w3-green w3-small w3-round w3-tag" style="font-size: 16px!important;">New Video</span>
+            <h1 class="w3-text-shadow">Pro Genji?!?! | Overwatch - Quick Play</h1>
+            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-blue">Karma</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2017-02-12T12:00:00+12:00" title="2-Feb-2017"/></span></p>
+              <hr style="border-color: #1b1b1b;">
+            <p>
+              <em class="name-blue">Karma</em> wow those r some gooood moves bro, what a pro genji
+              <br>
+              TODO: finish description
+            </p>
+      </div>
+    </div>
+    <div id="main-2" data-article="2" data-main="1" class="article">
+      <div class="intrinsic-container w3-animate-bottom w3-display-container">
             <iframe src="https://www.youtube.com/embed/zIHsuujC5Vk" frameborder="0" allowfullscreen></iframe>
           </span>
       </div>
@@ -109,46 +149,26 @@
             </p>
       </div>
     </div>
-    <div id="main-2" data-article="2" data-main="1" class="absolute article">
-      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
-        <span class="article-banner-positioner">
-          <img src="Assets/example.jpg"></img>
+    <div id="main-3" data-article="3" data-main="1" class="article" style="position:absolute">
+      <div class="intrinsic-container w3-animate-bottom w3-display-container">
+          <iframe src="https://www.youtube.com/embed/STsnLDHLe3c" frameborder="0" allowfullscreen></iframe>
         </span>
       </div>
       <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
-            <span class="w3-container w3-blue w3-small w3-round w3-tag" style="font-size: 16px!important;">News Article</span>
-            <h1 class="w3-text-shadow">When the article is clicked</h1>
-            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
+            <span class="w3-container w3-green w3-small w3-round w3-tag" style="font-size: 16px!important;">New Video</span>
+            <h1 class="w3-text-shadow">Singed Outplays | League Of Legends Gameplay</h1>
+            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-orange">PlacidBeetle</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2017-03-07T00:00:00+12:00" title="7-Mar-2017"/></span></p>
               <hr style="border-color: #1b1b1b;">
             <p>
-              <em class="name-green">Lime</em> made this cool news carousel reel
+              <em class="name-orange">PlacidBeetle</em> Winning rank games by playing singed proxy.
               <br>
               TODO: Make news
             </p>
       </div>
     </div>
-    <div id="main-3" data-article="3" data-main="1" class="absolute article">
-      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
-        <span class="article-banner-positioner">
-          <img src="Assets/example.jpg"></img>
-        </span>
-      </div>
-      <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
-            <span class="w3-container w3-blue w3-small w3-round w3-tag" style="font-size: 16px!important;">News Article</span>
-            <h1 class="w3-text-shadow">It will show the full article</h1>
-            <p style="font-size: 0.8em;" class="text-outline">By <em class="name-green">Lime</em> <span class="w3-round w3-tag w3-red">Posted <time class="timeago" datetime="2016-12-25T23:18:04+13:00" title="25-Dec-2016"/></span></p>
-              <hr style="border-color: #1b1b1b;">
-            <p>
-              <em class="name-green">Lime</em> made this cool news carousel reel
-              <br>
-              TODO: Make news
-            </p>
-      </div>
-    </div>
-    <div id="main-4" data-article="4" data-main="1" class="absolute article">
-      <div id="article-banner-container" class="w3-animate-bottom w3-display-container">
-        <span class="article-banner-positioner">
-          <img src="Assets/example.jpg"></img>
+    <div id="main-4" data-article="4" data-main="1" class="article" style="position:absolute">
+      <div class="intrinsic-container w3-animate-bottom w3-display-container">
+          <img src="http://i.imgur.com/LUXej9P.jpg"></img>
         </span>
       </div>
       <div class="w3-display-container article-main-description" style="background-color: #303133; height: auto; position: relative">
@@ -163,14 +183,23 @@
             </p>
       </div>
     </div>
-  </div><!--
-  --><div id="UNTITLED-positioner" style="display: inline-flex; vertical-align: top; max-width: 500px">
+  </div>
+  <!----><div id="UNTITLED-positioner" style="display: inline-flex; vertical-align: top;">
       <div class="w3-animate-right w3-container" style="padding:0;">
         <div style="background-color: #303133; width: 100%; padding-left: 8px;">
           <h1 style="margin:0;">Other News</h1>
         </div>
       <!--Only four articles can fit in ONE SLIDE-->
-      <div data-article="1" class="sub-news selected w3-half main-button">
+      <div data-article="1" class="sub-news w3-half main-button">
+          <article>
+            <div style="background-color: #5c5e5f;">
+              <h5>Pro Genji?!?! | Overwatch - Quick Play</h5>
+            </div>
+              <img width="100%"src="http://img.youtube.com/vi/nFv7B97x1F4/maxresdefault.jpg" alt="Other News">
+          </article>
+      </div>
+      <!--ARTICLE 2-->
+      <div data-article="2" class="sub-news selected w3-half main-button">
         <article>
             <div style="width: auto; background-color: #5c5e5f; padding:0;">
               <h5 width="150px">CSGO | Competitive Highlights #03</h5>
@@ -178,22 +207,13 @@
               <img width="100%"src="http://img.youtube.com/vi/zIHsuujC5Vk/maxresdefault.jpg" title="CSGO | Competitive Highlights #03" alt="CSGO | Competitive Highlights #03">
           </article>
       </div>  
-      <!--ARTICLE 2-->
-        <div data-article="2" class="sub-news w3-half main-button">
-          <article>
-            <div style="background-color: #5c5e5f;">
-              <h5>When the article is clicked</h5>
-            </div>
-              <img width="100%"src="Assets/example.jpg" alt="Other News">
-          </article>
-        </div>
       <!--ARTICLE 3-->
         <div data-article="3" class="sub-news w3-half main-button">
           <article>
             <div style="background-color: #5c5e5f;">
-              <h5>It will show the full article</h5>
+              <h5>Singed Outplays | League Of Legends Gameplay</h5>
             </div>
-              <img width="100%"src="Assets/example.jpg" alt="Other News">
+              <img width="100%"src="https://i.ytimg.com/vi/STsnLDHLe3c/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=1fijzOXmJrO1L4ZNcGsHKdpAwcc" alt="Other News">
           </article>
         </div>
       <!--ARTICLE 4-->
@@ -202,37 +222,33 @@
             <div style="background-color: #5c5e5f;">
               <h5>on the left side</h5>
             </div>
-              <img width="100%"src="Assets/example.jpg" alt="Other News">
+              <img width="100%"src="http://i.imgur.com/LUXej9P.jpg" alt="Other News">
           </article>
         </div>
       </div>
   </div>
   </div>
-</div>
+</ul>
 <!--FOOTER YEAH :D-->
 <footer style="color: white; width: 100%; height: 200px; background-color: #2C2F33; " class="w3-col w3-container">
      <div style="width: 100%px; font-size: 24px;"class="w3-padding-16 w3-container w3-center">
 	     <nav class="s3 w3-topnav">
-            <a href="About.html">About</a>
-            <a href="News.html">News</a>
-            <a href="Members.html">Members</a>
-            <a href="suggest.html">Suggestions</a>
-            <a href="Contact.html">Contact</a>
+            <a href="contact.html">About</a>
+            <a href="news.html">News</a>
+            <a href="members.html">Members</a>
+            <a href="contact.html">Contact</a>
          </nav>
 	 
 	  </div>
       <p style="font-size: 16px; padding: 20px;"class="w3-text-gray 3-container w3-center">© All rights reserved. Copyright AZN Invasion 2016.</p>
 </footer>
-
 <!--Nav Java-->
 <script>
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
 }
 </script>
 
